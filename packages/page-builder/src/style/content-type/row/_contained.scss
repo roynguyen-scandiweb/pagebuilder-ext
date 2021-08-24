@@ -1,0 +1,26 @@
+$layout__max-width: 1280px;
+
+.CmsPage {
+    [data-content-type='row'][data-appearance='contained'] {
+        box-sizing: border-box;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        max-width: $layout__max-width;
+
+        [data-element='inner'] {
+            box-sizing: border-box;
+        }
+    }
+
+    //
+    //  Mobile (style-m.css)
+    //  _____________________________________________
+
+    [data-content-type='row'][data-appearance='contained'] {
+        [data-element='inner'] {
+            @include mobile {
+                background-attachment: scroll !important;
+            }
+        }
+    }
+}

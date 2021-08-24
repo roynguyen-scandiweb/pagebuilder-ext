@@ -1,0 +1,15 @@
+.CmsPage {
+    [data-content-type='row'][data-appearance='full-bleed'] {
+        box-sizing: border-box;
+    }
+
+    //
+    //  Mobile (style-m.css)
+    //  _____________________________________________
+
+    [data-content-type='row'][data-appearance='full-bleed'] {
+        @include mobile {
+            background-attachment: scroll !important;
+        }
+    }
+}

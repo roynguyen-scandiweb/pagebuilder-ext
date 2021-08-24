@@ -1,0 +1,18 @@
+.CmsPage {
+    .pagebuilder-column {
+        box-sizing: border-box;
+    }
+
+    //
+    //  Mobile (style-m.css)
+    //  _____________________________________________
+
+    .pagebuilder-column {
+        @include mobile {
+            background-attachment: scroll !important;
+            flex-basis: 100%;
+            max-width: 100%;
+        }
+
+    }
+}

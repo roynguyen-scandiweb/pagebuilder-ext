@@ -1,0 +1,7 @@
+.CmsPage {
+    .pagebuilder-column-group {
+        @include mobile {
+            flex-wrap: wrap;
+        }
+    }
+}

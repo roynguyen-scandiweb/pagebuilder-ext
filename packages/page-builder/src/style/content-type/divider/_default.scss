@@ -1,0 +1,17 @@
+.CmsPage {
+    [data-element='line'] {
+        border-color: var(--primary-divider-color) !important;
+    }
+
+    hr {
+        border: none;
+        border-color: var(--primary-divider-color);
+        border-width: 1px;
+        border-top: solid;
+        border-top-color: var(--primary-divider-color);
+        border-top-width: 1px;
+        margin: 20px auto;
+        max-width: 100%;
+        width: 100%;
+    }
+}
