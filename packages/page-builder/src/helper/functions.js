@@ -18,3 +18,7 @@ export const makeId = length => {
   }
   return result;
 };
+
+export const isString = (item) => {
+  return typeof item === 'string' || item instanceof String
+}

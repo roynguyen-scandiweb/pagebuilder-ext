@@ -1,4 +1,5 @@
 import Html from 'SourceComponent/Html';
+import {isString} from '../../helper/functions';
 
 export class HtmlCode extends React.PureComponent {
   render() {
@@ -6,10 +7,19 @@ export class HtmlCode extends React.PureComponent {
       BaseHtmlCode
     } = this.props.elements;
 
-    const html = BaseHtmlCode.childEleBag[0]
+    const children = BaseHtmlCode.childEleBag[0]
 
     return <BaseHtmlCode.Ele>
-      {!!html ? <Html content={html} /> : null}
+      {isString(children) ?
+        <Html content={children} /> :
+        children.map(child => {
+          if (isString(child)) {
+            return <Html content={child} />
+          } else {
+            return child
+          }
+        })
+      }
     </BaseHtmlCode.Ele>
   }
 }
