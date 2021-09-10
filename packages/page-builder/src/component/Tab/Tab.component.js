@@ -3,8 +3,11 @@ import classNames from 'classnames';
 export class Tab extends React.PureComponent {
   constructor(props) {
     super(props);
+    const { BaseTabs } = props.elements
+    const activeIdx = BaseTabs.propsBag && BaseTabs.propsBag[0] && BaseTabs.propsBag[0]['data-active-tab'] || 0
+
     this.state = {
-      activeIdx: 0
+      activeIdx
     }
   }
 

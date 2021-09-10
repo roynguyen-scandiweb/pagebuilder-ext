@@ -1,6 +1,5 @@
 .CmsPage {
     div[data-content-type='slider'] {
-        visibility: hidden;
 
         &.slick-initialized {
             visibility: visible;

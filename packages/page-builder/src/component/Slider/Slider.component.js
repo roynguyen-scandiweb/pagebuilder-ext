@@ -61,7 +61,7 @@ export class Slider extends React.PureComponent {
 
     return (
       <div key={i}>
-        <Slide.Ele>
+        <Slide.Ele {...Slide.propsBag[i]}>
           {Slide.childEleBag[i]}
         </Slide.Ele>
       </div>
@@ -70,9 +70,9 @@ export class Slider extends React.PureComponent {
 
   render() {
     const { activeImage } = this.state;
-    const { Slide } = this.props.elements;
+    const { BaseSlider, Slide } = this.props.elements;
 
-    return <div>
+    return <BaseSlider.Ele>
       <ScandiPwaSlider
         mix={{ block: 'PageBuilderSlider' }}
         showCrumbs={this.sliderProps['data-show-dots'] === 'true'}
@@ -82,7 +82,7 @@ export class Slider extends React.PureComponent {
       >
         {Slide.propsBag.map(this.renderSlide)}
       </ScandiPwaSlider>
-    </div>
+    </BaseSlider.Ele>
   }
 }
 
