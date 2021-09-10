@@ -1,16 +1,8 @@
 type Query {
     googleMapConfig: googleMapType @resolver(class:"\\ScandiPWA\\PageBuilderGraphQl\\Model\\Resolver\\GoogleMap") @doc(description: "Query to get google map config")
-    dynamicBlock(
-        id: Int! @doc(description: "Id of the Banner Content table")
-    ): dynamicBlockType @resolver(class:"\\ScandiPWA\\PageBuilderGraphQl\\Model\\Resolver\\DynamicBlock") @doc(description: "Query to get dynamic block in Banner Content table")
 }
 
 type googleMapType {
     apiKey: String
 }
-
-type dynamicBlockType {
-    content: String
-}
-
 

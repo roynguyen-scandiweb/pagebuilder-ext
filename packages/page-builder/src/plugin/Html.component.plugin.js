@@ -4,13 +4,11 @@ import Tab from '../component/Tab';
 import Buttons from '../component/Buttons';
 import Slider from '../component/Slider';
 import GoogleMap from '../component/GoogleMap';
-import DynamicBlock from '../component/DynamicBlock';
 import Dotdigital from '../component/DotdigitalForm';
 import HtmlCode from '../component/HtmlCode';
 import {GOOGLE_MAP_SKELETON} from '../component/GoogleMap/GoogleMap.config';
 import {BUTTONS_SKELETON} from '../component/Buttons/Buttons.config';
 import {SLIDER_SKELETON} from '../component/Slider/Slider.config';
-import {DYNAMIC_BLOCK_SKELETON} from '../component/DynamicBlock/DynamicBlock.config';
 import {DOTDIGITAL_FORM_SKELETON} from '../component/DotdigitalForm/Dotdigital.config';
 import {TAB_SKELETON} from '../component/Tab/Tab.config';
 import {HTML_CODE_SKELETON} from '../component/HtmlCode/HtmlCode.config';
@@ -36,7 +34,6 @@ export class HtmlComponentPlugin {
     { query: { dataContentType: 'tabs' }, replace: this.replaceTab },
     { query: { dataContentType: 'slider' }, replace: this.replaceSlider },
     { query: { dataContentType: 'map' }, replace: this.replaceMap },
-    { query: { dataContentType: 'dynamic_block' }, replace: this.replaceDynamicBlock },
     { query: { dataContentType: 'dotdigitalgroup_form' }, replace: this.replaceDotdigitalForm },
     { query: { dataContentType: 'html' }, replace: this.replaceHtmlCode }
   ]
@@ -216,10 +213,6 @@ export class HtmlComponentPlugin {
 
   replaceMap(domNode) {
     return <GoogleMap elements={this.toReactElements([domNode], GOOGLE_MAP_SKELETON)} />
-  };
-
-  replaceDynamicBlock(domNode) {
-    return <DynamicBlock elements={this.toReactElements([domNode], DYNAMIC_BLOCK_SKELETON)} />
   };
 
   replaceDotdigitalForm(domNode) {
