@@ -1,5 +1,9 @@
 # ScandiPWA Page Builder extension
 
+- Magento 2.4.3. Please checkout to branch `magento-2.4.3`. Support both `community` and `enterprise` mode
+- Magento below 2.4.3. Please checkout to branch `magento-enterprise-2.4.2`. Support `enterprise` mode only
+
+
 ### Third party dependencies:
 
 None
